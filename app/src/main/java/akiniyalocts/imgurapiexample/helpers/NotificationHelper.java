@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.v4.app.NotificationCompat;
+import android.util.Log;
 
 import java.lang.ref.WeakReference;
 
@@ -50,6 +51,7 @@ public class NotificationHelper {
         mBuilder.setContentTitle(mContext.get().getString(R.string.notifaction_success));
 
         mBuilder.setContentText(response.data.link);
+        Log.e("caca", response.data.link.toString());
 
         mBuilder.setColor(mContext.get().getResources().getColor(R.color.primary));
 
